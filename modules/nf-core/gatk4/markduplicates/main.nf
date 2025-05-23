@@ -41,7 +41,7 @@ process GATK4_MARKDUPLICATES {
         // Memory is per core so total memory is
         //    NumCores*(Mem/Core)
         //
-        avail_mem = (task.cpus*task.memory.mega*0.8).intValue()
+        avail_mem = (task.memory.mega*0.8).intValue()
     }
 
     // Using samtools and not Markduplicates to compress to CRAM speeds up computation:
